@@ -1,0 +1,712 @@
+/* Root variables for light mode (default) */
+:root {
+    --body-bg: #d7edf9;
+    --head1-bg-start: #e0f2f7;
+    --head1-bg-mid1: #88cdec;
+    --head1-bg-mid2: #3b8baf;
+    --head1-bg-mid3: #1c556f;
+    --head1-bg-end: #0f384b;
+    --title-color: white;
+    --nav-link-color: white;
+    --nav-link-hover-bg: #4e94e0;
+    --text-box-color: white;
+    --hero-btn-border: white;
+    --hero-btn-color: white;
+    --hero-btn-hover-border: #10325e;
+    --hero-btn-hover-bg: #10325e;
+    --newsandevents-bg: #d7edf9;
+    --newsandevents-textarea-border: #00000033; /* Slightly transparent black */
+    --newsandevents-h2-color: black;
+    --newsandevents-h3-color: black;
+    --newsandevents-p-color: black;
+    --newsandevents-button-bg: #007bff;
+    --newsandevents-button-color: white;
+    --newsandevents-button-hover-bg: #0056b3;
+    --calendar-section-bg: white;
+    --calendar-container-border: #ccc;
+    --calendar-header-button-color: black;
+    --day-border: #eee;
+    --day-color: black;
+    --day-hover-bg: #333;
+    --day-hover-color: whitesmoke;
+    --day-current-bg: #62a9f5;
+    --day-current-color: white;
+    --footer-bg: #0099f8;
+    --footer-color: white;
+    --foot-h4-color: black;
+    --copyright-bg-start: #235d78;
+    --copyright-bg-end: #88cdec;
+    --copyright-color: white;
+    --article-bg-start: #aed3dd;
+    --article-bg-mid1: #88cdec;
+    --article-bg-mid2: #3b8baf;
+    --article-bg-mid3: #1c556f;
+    --article-bg-mid4: #235d78;
+    --article-color: white;
+    --dropdown-bg: blue;
+    --dropdown-link-color: rgb(235, 235, 241);
+    --table-th-bg: rgb(95, 7, 7);
+    --table-td-bg: rgb(5, 20, 63);
+    --table-text-color: white;
+    --accordion-bg: #eee;
+    --accordion-color: #444;
+    --accordion-active-bg: #ccc;
+    --panel-bg: white;
+    --panel-color: black;
+    --newcurriculum-bg-start: #3498db;
+    --newcurriculum-bg-end: #e0f2f7;
+    --accordion-border-color: #ccc;
+    --sublist-color: black;
+}
+
+/* Dark mode variables */
+.dark-mode {
+    --body-bg: #1e1e1e;
+    --head1-bg-start: #333;
+    --head1-bg-mid1: #555;
+    --head1-bg-mid2: #777;
+    --head1-bg-mid3: #999;
+    --head1-bg-end: #bbb;
+    --title-color: #eee;
+    --nav-link-color: #eee;
+    --nav-link-hover-bg: #777;
+    --text-box-color: #eee;
+    --hero-btn-border: #eee;
+    --hero-btn-color: #eee;
+    --hero-btn-hover-border: #bbb;
+    --hero-btn-hover-bg: #bbb;
+    --newsandevents-bg: #333;
+    --newsandevents-textarea-border: #ffffff33; /* Slightly transparent white */
+    --newsandevents-h2-color: #eee;
+    --newsandevents-h3-color: #eee;
+    --newsandevents-p-color: #ddd;
+    --newsandevents-button-bg: #555;
+    --newsandevents-button-color: #eee;
+    --newsandevents-button-hover-bg: #777;
+    --calendar-section-bg: #222;
+    --calendar-container-border: #555;
+    --calendar-header-button-color: #eee;
+    --day-border: #555;
+    --day-color: #ddd;
+    --day-hover-bg: #777;
+    --day-hover-color: #eee;
+    --day-current-bg: #444;
+    --day-current-color: #eee;
+    --footer-bg: #333;
+    --footer-color: #eee;
+    --foot-h4-color: #eee;
+    --copyright-bg-start: #555;
+    --copyright-bg-end: #777;
+    --copyright-color: #eee;
+    --article-bg-start: #444;
+    --article-bg-mid1: #555;
+    --article-bg-mid2: #666;
+    --article-bg-mid3: #777;
+    --article-bg-mid4: #888;
+    --article-color: #eee;
+    --dropdown-bg: #444;
+    --dropdown-link-color: #ddd;
+    --table-th-bg: #770e0e;
+    --table-td-bg: #0a2a55;
+    --table-text-color: #eee;
+    --accordion-bg: #444;
+    --accordion-color: #ddd;
+    --accordion-active-bg: #555;
+    --panel-bg: #333;
+    --panel-color: #ddd;
+    --newcurriculum-bg-start: #2980b9;
+    --newcurriculum-bg-end: #34495e;
+    --accordion-border-color: #555;
+    --sublist-color: #f0f0f0;
+}
+
+/* Apply variables to your existing styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: var(--body-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: black; /* Default text color */
+}
+
+.dark-mode body {
+    color: #eee; /* Dark mode text color */
+}
+
+.head1 {
+    background-image: linear-gradient(
+        to right,
+        var(--head1-bg-start),
+        var(--head1-bg-mid1),
+        var(--head1-bg-mid2),
+        var(--head1-bg-mid3),
+        var(--head1-bg-end)
+    );
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-image 0.3s ease;
+}
+
+#title {
+    color: var(--title-color);
+    text-decoration: none;
+    padding: auto;
+    font-weight: bold;
+    font-size: 2.0em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: color 0.3s ease;
+}
+
+.b-container {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.badge {
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.open {
+    background-color: white;
+}
+
+.heads {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(img8.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: background-image 0.3s ease;
+}
+
+.dark-mode .heads {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img8-dark.jpg); /* Assuming you have a dark version */
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--nav-link-hover-bg);
+    display: block;
+    margin: auto;
+    transition: width 0.2s, background-color 0.3s ease;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: var(--text-box-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: color 0.3s ease, opacity 1s ease-in-out;
+}
+
+.text-box h2 {
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    font-family: cambria;
+    color: var(--text-box-color);
+    transition: color 0.3s ease;
+}
+
+#m {
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid var(--hero-btn-border);
+    color: var(--hero-btn-color);
+    background: transparent;
+    transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+#m:hover {
+    border-color: var(--hero-btn-hover-border);
+    background-color: var(--hero-btn-hover-bg);
+}
+
+.hero-btn {
+    display: inline;
+    text-decoration: none;
+    color: var(--hero-btn-color);
+    border: 2px solid var(--hero-btn-border);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    border-radius: 10px;
+    transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    border: 2px solid var(--hero-btn-hover-border);
+    background-color: var(--hero-btn-hover-bg);
+    transition: 1s;
+}
+
+/*CSS to support the news and events page*/
+#newsandevents {
+    margin: 2rem 5rem;
+    border: none;
+    background-color: var(--newsandevents-bg);
+    border-radius: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#newsandevents fieldset {
+    border: none;
+}
+
+#newsandevents textarea {
+    width: 100%;
+    height: 12rem;
+    border: 0.3px dashed var(--newsandevents-textarea-border);
+    background-color: transparent;
+    color: inherit;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#newsandevents h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--newsandevents-h2-color);
+    transition: color 0.3s ease;
+}
+
+#newsandevents h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--newsandevents-h3-color);
+    transition: color 0.3s ease;
+}
+
+#newsandevents p {
+    line-height: 1.5rem;
+    color: var(--newsandevents-p-color);
+    transition: color 0.3s ease;
+}
+
+#sports {
+    line-height: 1.5rem;
+    color: var(--newsandevents-p-color); /* Inherit paragraph color */
+    transition: color 0.3s ease;
+}
+
+#newsandevents legend {
+    text-align: center;
+    color: var(--newsandevents-h2-color);
+    transition: color 0.3s ease;
+}
+
+#newsandevents button {
+    background-color: var(--newsandevents-button-bg);
+    color: var(--newsandevents-button-color);
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#newsandevents button:hover {
+    background-color: var(--newsandevents-button-hover-bg);
+}
+
+#calendar-section {
+    background-color: var(--calendar-section-bg);
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar-container {
+    border: 1px solid var(--calendar-container-border);
+    padding: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-header button {
+    padding: 8px 15px;
+    border: none;
+    color: var(--calendar-header-button-color);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar-header h3 {
+    margin: 0;
+    color: var(--newsandevents-h3-color);
+    transition: color 0.3s ease;
+}
+
+#calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for the days of the week */
+    gap: 5px;
+}
+
+    .day {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid var(--day-border);
+        cursor: pointer;
+        border-radius: 3px;
+        color: var(--day-color);
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .day:hover {
+        background-color: var(--day-hover-bg);
+        color: var(--day-hover-color);
+    }
+    
+    .day.current {
+        background-color: var(--day-current-bg);
+        color: var(--day-current-color);
+    }
+    
+    footer {
+        text-align: center;
+        padding: 1em 0;
+        background-color: var(--footer-bg);
+        color: var(--footer-color);
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* FOOTER HTML */
+    .foot {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+        color: black; /* Default color, will be overridden by variables */
+        transition: color 0.3s ease;
+    }
+    
+    .dark-mode .foot {
+        color: var(--footer-color);
+    }
+    
+    .foot h4 {
+        margin-bottom: 25px;
+        margin-top: 0px;
+        font-weight: 600;
+        font-family: sans-serif;
+        font-size: 25px;
+        color: var(--foot-h4-color);
+        transition: color 0.3s ease;
+    }
+    
+    .icons {
+        margin-bottom: 25px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    
+    .copyright {
+        background-image: linear-gradient(
+            to top,
+            var(--copyright-bg-start),
+            var(--copyright-bg-end)
+        );
+        box-sizing: border-box;
+        color: var(--copyright-color);
+        transition: background-image 0.3s ease, color 0.3s ease;
+    }
+    
+    article {
+        background-image: linear-gradient(
+            to top,
+            var(--article-bg-start),
+            var(--article-bg-mid1),
+            var(--article-bg-mid2),
+            var(--article-bg-mid3),
+            var(--article-bg-mid4)
+        );
+        color: var(--article-color);
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        border-radius: 20px;
+        transition: background-image 0.3s ease, color 0.3s ease;
+    }
+    
+    #academics ul li a:hover {
+        color: black;
+    }
+    
+    .dark-mode #academics ul li a:hover {
+        color: #f0f0f0;
+    }
+    
+    #school-Life ul li a:hover {
+        color: black;
+    }
+    
+    .dark-mode #school-Life ul li a:hover {
+        color: #f0f0f0;
+    }
+    
+    .section {
+        padding: 20px;
+        margin-left: 100;
+        color: black; /* Default text color */
+        transition: background-image 0.3s ease, color 0.3s ease;
+    }
+    
+    .dark-mode .section {
+        color: var(--article-color);
+    }
+    
+    .divider {
+        border-bottom: 1px solid rgb(255, 255, 255);
+        margin: 20px 0;
+        transition: border-color 0.3s ease;
+    }
+    
+    .dark-mode .divider {
+        border-bottom: 1px solid #555;
+    }
+    
+    #academics ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    #academics li {
+        margin-bottom: 5px;
+    }
+    
+    #academics a {
+        color: var(--article-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    #school-life ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    #school-Life a {
+        color: var(--article-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .content-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .content-container .section {
+        flex: 1 1 300px;
+        background-image: linear-gradient(
+            to top,
+            var(--article-bg-start),
+            var(--article-bg-end) /* Using end for simplicity, adjust as needed */
+        );
+        transition: background-image 0.3s ease, color 0.3s ease;
+    }
+    
+    @media (min-width: 768px) {
+        .content-container {
+            flex-wrap: nowrap;
+        }
+    }
+    
+    a img {
+        transition: transform 0.3s ease;
+    }
+    
+    a img:hover {
+        transform: scale(1.1);
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--dropdown-bg);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        transition: background-color 0.3s ease;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown-content a {
+        color: var(--dropdown-link-color);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    /*department*/
+    table {
+        width: 90%;
+        border-collapse: collapse;
+        font-family: sans-serif;
+        margin: auto;
+    }
+    
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+        color: var(--table-text-color);
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+    
+    th {
+        background-color: var(--table-th-bg);
+    }
+    
+    td {
+        background-color: var(--table-td-bg);
+    }
+    
+    .department_container table {
+        margin: 0 auto;
+    }
+    
+    /*curriculum*/
+    .newcurriculum {
+        margin: 50px;
+        text-align: justify;
+        background: repeating-linear-gradient(-60deg, var(--newcurriculum-bg-start), var(--newcurriculum-bg-start) 15px, var(--newcurriculum-bg-end) 15px, var(--newcurriculum-bg-end) 30px);
+        color: black; /* Default text color */
+        transition: background-image 0.3s ease, color 0.3s ease;
+    }
+    
+    .dark-mode .newcurriculum {
+        color: #f0f0f0;
+    }
+    
+    .accordion {
+        background-color: var(--accordion-bg);
+        color: var(--accordion-color);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        border-bottom: 1px solid var(--accordion-border-color);
+    }
+    
+    .dark-mode .accordion {
+        border-bottom-color: var(--accordion-border-color);
+    }
+    
+    .active,
+    .accordion:hover {
+        background-color: var(--accordion-active-bg);
+    }
+    
+    .panel {
+        padding: 0 18px;
+        background-color: var(--panel-bg);
+        color: var(--panel-color);
+        display: none;
+        overflow: hidden;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .subject-item {
+        margin-bottom: 5px;
+        color: black; /* Default text color */
+        transition: color 0.3s ease;
+    }
+    
+    .dark-mode .subject-item {
+        color: var(--panel-color);
+    }
+    
+    #sublist {
+        margin: 50px;
+        color: var(--sublist-color);
+        transition: color 0.3s ease;
+    }
+    .heads{
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.7)),url(img3.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        transition: background-image 0.3s ease;
+    }
+    .dark-mode .heads {
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url(img3.jpg); /* Dark overlay, same image */
+    }

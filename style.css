@@ -1,0 +1,38 @@
+body {
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+    font-style: italic;
+    ::before{
+        content: "UGANDA AIRLINES";
+        position: fixed;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%) rotate(-45deg);
+        font-size: 3em;
+        color: rgba(0, 0, 0, 0.2);
+        z-index: -2;
+
+
+    }
+    
+}
+div+p{
+    background-color: red;
+}
+table{
+    font-style: oblique;
+    background-color: aqua;
+}
+ table{font-stretch: extra-expanded;
+    font-weight: bolder;
+
+}
+#hat{
+    background-color: blue;
+    color: brown;
+}
+.hut{
+    background-color: aqua;
+
+}

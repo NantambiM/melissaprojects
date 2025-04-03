@@ -1,0 +1,419 @@
+/* HEADER HTML*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #d7edf9;
+    color: #333; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark-mode{
+    background-color: #333;
+    color: #f8f8f8;
+}
+.head1{
+    background-image: linear-gradient(
+        to right, #e0f2f7,
+        #88cdec,
+        #3b8baf,
+        #1c556f,
+        #0f384b
+    );
+    padding: 5px 10px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    transition: background-image 0.3s ease;
+}
+.dark-mode .head1 {
+    background-image: linear-gradient(
+        to right, #333,
+        #555,
+        #777,
+        #999,
+        #bbb
+    );
+}
+#title{
+    color: white;
+    text-decoration: none;
+    padding: auto;
+    font-weight: bold;
+    font-size: 2.0em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: color 0.3s ease;
+}
+.dark-mode #title {
+    color: #eee;
+}
+.b-container{
+    background-color: transparent;
+    border-radius: 5px;
+}
+.badge{
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+.open{
+    background-color: white;
+}
+.heads{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.7)),url(img3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: background-image 0.3s ease;
+}
+.dark-mode .heads {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(img3-dark.jpg); /* Assuming you have a dark version */
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+.dark-mode .nav-links ul li a {
+    color: #eee;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #4e94e0;
+    display: block;
+    margin: auto;
+    transition: width 0.2s, background-color 0.3s ease;
+}
+.dark-mode .nav-links ul li::after {
+    background: #777; /* Darker hover color */
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: color 0.3s ease, opacity 1s ease-in-out;
+}
+.dark-mode .text-box {
+    color: #eee;
+}
+.text-box h2{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text-box p{
+    margin: 10px 0 40px;;
+    font-size: 14px;
+    font-family:cambria;
+    color: white;
+    transition: color 0.3s ease;
+}
+.dark-mode .text-box p {
+    color: #ddd;
+}
+#m {
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+    transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+.dark-mode #m {
+    border-color: #eee;
+    color: #eee;
+}
+
+.hero-btn{
+    display: inline;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    border-radius: 10px;
+    transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+.dark-mode .hero-btn {
+    color: #eee;
+    border-color: #eee;
+}
+.hero-btn:hover{
+    border: 2px solid #10325e;
+    background-color:#10325e;
+    transition: 1s;
+}
+.dark-mode .hero-btn:hover {
+    border: 2px solid #bbb;
+    background-color: #bbb;
+    color: #333;
+}
+
+/* FOOTER HTML */
+.foot{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color: black; /* Default text color */
+    transition: color 0.3s ease;
+}
+.dark-mode .foot {
+    color: #f8f8f8;
+}
+.foot h4{
+    margin-bottom: 25px;
+    margin-top: 0px;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: black; /* Default color */
+    transition: color 0.3s ease;
+}
+.dark-mode .foot h4 {
+    color: #eee;
+}
+
+.icons {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    background-image: linear-gradient(
+        to top, #235d78,
+        #88cdec
+    );
+    box-sizing: border-box;
+    color: white;
+    height: 10vh;
+    text-align: center;
+    transition: background-image 0.3s ease, color 0.3s ease;
+}
+.dark-mode .copyright{
+    background-image: linear-gradient(
+        to top, #555,
+        #777
+    );
+    color: #eee;
+}
+article{
+    background-image: linear-gradient(
+        to top, #aed3dd,
+        #88cdec,
+        #3b8baf,
+        #1c556f,
+        #235d78
+    );
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    transition: background-image 0.3s ease, color 0.3s ease;
+}
+.dark-mode article {
+    background-image: linear-gradient(
+        to top, #444,
+        #555,
+        #666,
+        #777,
+        #888
+    );
+    color: #eee;
+}
+#academics ul li a:hover{
+    color: rgb(0, 0, 0);
+}
+.dark-mode #academics ul li a:hover{
+    color: #f0f0f0;
+}
+#school-Life ul li a:hover{
+    color: rgb(0, 0, 0);
+}
+.dark-mode #school-Life ul li a:hover{
+    color: #f0f0f0;
+}
+
+.section{
+    padding: 20px;
+    margin-left: 100;
+    color: black; /* Default text color */
+    transition: color 0.3s ease;
+}
+.dark-mode .section{
+    color: #f8f8f8;
+}
+.divider{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    margin: 20px 0;
+    transition: border-color 0.3s ease;
+}
+.dark-mode .divider{
+    border-bottom: 1px solid #555;
+}
+#academics ul{
+    list-style: none;
+    padding: 0;
+}
+#academics li{
+    margin-bottom: 5px;
+}
+#academics a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.dark-mode #academics a{
+    color: #eee;
+}
+#school-life ul{
+    list-style: none;
+    padding: 0;
+}
+#school-Life a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.dark-mode #school-Life a{
+    color: #eee;
+}
+.content-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content-container .section{
+    flex: 1 1 300px;
+    background-image: linear-gradient(
+        to top, #235d78,
+        #88cdec
+    );
+    transition: background-image 0.3s ease;
+}
+.dark-mode .content-container .section{
+    background-image: linear-gradient(
+        to top, #555,
+        #777
+    );
+}
+@media(min-width:768px){
+    .content-container{
+        flex-wrap: nowrap;
+    }
+}
+a img{
+    transition: transform 0.3s ease;
+
+}
+a img:hover{
+    transform: scale(1.1);
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:blue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+.dark-mode .dropdown-content{
+    background-color: #444;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content a{
+    color: rgb(235, 235, 241);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+.dark-mode .dropdown-content a{
+    color: #ddd;
+}
+.dropdown{
+    position: relative ;
+    display: inline-block;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.table-container table{
+    margin: 0 auto;
+
+}
+table{
+    width: 90%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+}
+th,td{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+th {
+    background-color: rgb(95, 7, 7);
+}
+.dark-mode th {
+    background-color: #770e0e;
+    color: #eee;
+}
+td{
+    background-color: blue;
+}
+.dark-mode td{
+    background-color: #0a2a55;
+    color: #ddd;
+}
+.heads{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.7)),url(img3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: background-image 0.3s ease;
+}
+.dark-mode .heads {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url(img3.jpg); /* Dark overlay, same image */
+}

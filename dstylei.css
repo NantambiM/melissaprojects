@@ -1,0 +1,197 @@
+/* Existing styles (light mode) - keep these! */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #d7edf9; /* Light background */
+    color: #333; /* Dark text */
+}
+
+.head1{
+    background-image: linear-gradient(
+        to right, #e0f2f7,
+        #88cdec,
+        #3b8baf,
+        #1c556f,
+        #0f384b
+    );
+    /* ... other styles ... */
+}
+
+#title{
+    color: white;
+    /* ... other styles ... */
+}
+
+nav {
+    /* ... other styles ... */
+}
+
+.nav-links ul li a{
+    color: white;
+    /* ... other styles ... */
+}
+
+.text-box{
+    color: white;
+    /* ... other styles ... */
+}
+
+footer {
+    background-color: #0099f8;
+    color: white;
+    /* ... other styles ... */
+}
+
+.calendar-container {
+    border: 1px solid #ccc;
+    background-color: white; /* Ensure calendar background is light by default */
+    /* ... other styles ... */
+}
+
+.day {
+    border: 1px solid #eee;
+    color: black; /* Ensure day text is dark by default */
+    /* ... other styles ... */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333; /* Dark background */
+    color: #f8f8f8; /* Light text */
+}
+
+body.dark-mode .head1 {
+    background-image: linear-gradient(
+        to right, #292929,
+        #434343,
+        #5e5e5e,
+        #7a7a7a,
+        #969696
+    ); /* A darker gradient for dark mode */
+}
+
+body.dark-mode #title {
+    color: #e0e0e0; /* Slightly lighter title text in dark mode */
+}
+
+body.dark-mode nav {
+    /* You might want to adjust nav background or text colors here */
+}
+
+body.dark-mode .nav-links ul li a {
+    color: #e0e0e0; /* Lighter link text in dark mode */
+}
+
+body.dark-mode .text-box {
+    color: #e0e0e0; /* Lighter text box text */
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a; /* Darker footer background */
+    color: #e0e0e0; /* Lighter footer text */
+}
+
+body.dark-mode .calendar-container {
+    border: 1px solid #555;
+    background-color: #444; /* Darker calendar background */
+    color: #f8f8f8; /* Light text in calendar */
+}
+
+body.dark-mode .day {
+    border: 1px solid #666;
+    color: #f8f8f8; /* Light day text */
+}
+
+body.dark-mode .day:hover {
+    background-color: #666;
+    color: #333; /* Darker text on hover in dark mode */
+}
+
+body.dark-mode .calendar-header button {
+    color: #f8f8f8; /* Light button text in dark mode */
+    /* You might want to style the button background too */
+}
+
+body.dark-mode .box {
+    background-color: #555; /* Darker default box background */
+    color: #f8f8f8; /* Light text in boxes */
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.1); /* Adjust shadow for dark mode */
+}
+
+body.dark-mode .mission {
+    background-color: rgba(100, 0, 0, 0.7); /* Darker red for mission */
+    color: #f8f8f8;
+}
+
+body.dark-mode .vision {
+    background-color: rgba(0, 0, 150, 0.7); /* Darker blue for vision */
+    color: #f8f8f8;
+}
+
+body.dark-mode .core-values {
+    border-color: #0a5e30; /* Darker green border */
+    color: #f8f8f8;
+    background-color: rgba(10, 0, 0, 0.7); /* Darker red for core values */
+}
+
+body.dark-mode .class-card {
+    box-shadow: 5px 5px 20px #000; /* Darker shadow for class cards */
+    /* You might want to adjust the gradient or text colors */
+}
+
+body.dark-mode .footer-cont {
+    background-color: #2c3e50; /* Darker footer container */
+}
+
+body.dark-mode #f {
+    color: #d0d0d0; /* Lighter footer text */
+}
+
+body.dark-mode .footer-links h3 {
+    color: #6dd5ed; /* A different color for headings in dark footer */
+}
+
+body.dark-mode .footer-items a {
+    color: #d0d0d0; /* Lighter links in dark footer */
+}
+
+body.dark-mode .copyright {
+    background-image: linear-gradient(
+        to top, #14274e,
+        #4b77be
+    ); /* Darker gradient for copyright */
+    color: #e0e0e0;
+}
+
+body.dark-mode article {
+    background-image: linear-gradient(
+        to top, #14274e,
+        #4b77be,
+        #5e86c4,
+        #7395ae,
+        #aed3dd
+    ); /* Darker gradient for article */
+    color: #e0e0e0;
+}
+
+body.dark-mode #academics a,
+body.dark-mode #school-life a {
+    color: #d0d0d0; /* Lighter text in article sections */
+}
+
+body.dark-mode .testimonials-container {
+    background-color: #34495e; /* Darker background for testimonials */
+    color: #f8f8f8;
+}
+
+body.dark-mode .testimonials-container h2 {
+    color: #e74c3c; /* A different heading color in dark mode */
+}
+
+body.dark-mode .testimonial-icon {
+    border-color: #f39c12; /* Different border color for icon in dark mode */
+}
+
+body.dark-mode .testimonial-text footer {
+    color: #bbb;
+}

@@ -1,0 +1,265 @@
+/* Color Palette (Light Mode - Default) */
+:root {
+    --cream: #F2EFE7;
+    --sky-blue: #9ACBD0;
+    --teal: #48A6A7;
+    --deep-teal: #006A71;
+
+    --background-color: var(--cream);
+    --text-color: var(--deep-teal);
+    --tab-background: var(--sky-blue);
+    --tab-text-color: white;
+    --tab-hover-background: var(--teal);
+    --content-background: white;
+    --content-border: var(--teal);
+    --heading-color: var(--deep-teal);
+    --heading-border: var(--sky-blue);
+    --footer-gradient-start: #235d78;
+    --footer-gradient-end: #88cdec;
+    --article-gradient-start: #aed3dd;
+    --article-gradient-mid1: #88cdec;
+    --article-gradient-mid2: #3b8baf;
+    --article-gradient-mid3: #1c556f;
+    --article-gradient-end: #235d78;
+    --article-text-color: white;
+    --link-hover-color: black; /* For links within articles/sections */
+    --divider-color: white;
+}
+
+body {
+    background-image: url("image3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 2rem;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --background-color: #1E1E1E; /* Dark grey */
+    --text-color: #D4D4D4; /* Light grey */
+    --tab-background: #37474F; /* Darker grey-blue */
+    --tab-text-color: #ECEFF1; /* Light grey */
+    --tab-hover-background: #546E7A; /* Medium grey-blue */
+    --content-background: #2C2C2C; /* Darker grey */
+    --content-border: #546E7A; /* Medium grey-blue */
+    --heading-color: #ECEFF1; /* Light grey */
+    --heading-border: #546E7A; /* Medium grey-blue */
+    --footer-gradient-start: #0F2027; /* Darker */
+    --footer-gradient-end: #2C5364; /* Darker */
+    --article-gradient-start: #2C5364; /* Darker */
+    --article-gradient-mid1: #203A43; /* Darker */
+    --article-gradient-mid2: #0F2027; /* Darker */
+    --article-gradient-mid3: #0F2027; /* Darker - can be the same as end for a smoother look */
+    --article-gradient-end: #2C5364; /* Darker */
+    --link-hover-color: #ADD8E6; /* Light blue for better visibility */
+    --divider-color: #424242; /* Darker grey */
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tablink {
+    background-color: var(--tab-background);
+    color: var(--tab-text-color);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tablink:hover {
+    background-color: var(--tab-hover-background);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Darker shadow for dark mode */
+}
+
+.tabcontent {
+    display: none;
+    padding: 2rem;
+    background: var(--content-background);
+    color: var(--text-color);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Darker shadow for dark mode */
+    margin: 1rem auto;
+    max-width: 800px;
+    border: 2px solid var(--content-border);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.tabcontent.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+h2 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--heading-border);
+    padding-bottom: 0.5rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .tablink {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.foot {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.foot h4 {
+    margin-bottom: 25px;
+    margin-top: 0px;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: var(--text-color); /* Added text color */
+    transition: color 0.3s ease;
+}
+
+.icons {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    background-image: linear-gradient(
+        to top,
+        var(--footer-gradient-start),
+        var(--footer-gradient-end)
+    );
+    box-sizing: border-box;
+    color: white;
+    transition: background-image 0.3s ease;
+}
+
+article {
+    background-image: linear-gradient(
+        to top,
+        var(--article-gradient-start),
+        var(--article-gradient-mid1),
+        var(--article-gradient-mid2),
+        var(--article-gradient-mid3),
+        var(--article-gradient-end)
+    );
+    color: var(--article-text-color);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    transition: background-image 0.3s ease, color 0.3s ease;
+}
+
+#academics ul li a:hover {
+    color: var(--link-hover-color);
+    transition: color 0.3s ease;
+}
+
+#school-Life ul li a:hover {
+    color: var(--link-hover-color);
+    transition: color 0.3s ease;
+}
+
+.section {
+    padding: 20px;
+    margin-left: 100;
+}
+
+.divider {
+    border-bottom: 1px solid var(--divider-color);
+    margin: 20px 0;
+    transition: border-color 0.3s ease;
+}
+
+#academics ul {
+    list-style: none;
+    padding: 0;
+}
+
+#academics li {
+    margin-bottom: 5px;
+}
+
+#academics a {
+    color: var(--article-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#school-life ul {
+    list-style: none;
+    padding: 0;
+}
+
+#school-Life a {
+    color: var(--article-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-container .section {
+    flex: 1 1 300px;
+    background-image: linear-gradient(
+        to top,
+        var(--footer-gradient-start),
+        var(--footer-gradient-end)
+    );
+    transition: background-image 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .content-container {
+        flex-wrap: nowrap;
+    }
+}
+
+a img {
+    transition: transform 0.3s ease;
+}
+
+a img:hover {
+    transform: scale(1.1);
+}
+button{
+    position: fixed;
+}
